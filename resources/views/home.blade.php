@@ -5,164 +5,229 @@
 @extends('layouts.app')
 
 @section('content')
-	<?php 
-		if(!isset($_COOKIE['variant_key'])) {
-			$variant =  getRWF(get_field( 'multivariate')); 
-		} else {
-			$variant = $_COOKIE['variant_key'];
-		}
-	?>
-
-	<script>ga('set', 'dimension1', '{{$variant+1}}');</script>
-
-  	<div class="hero row primary pa-s--s pb-xl--s valign-wrapper" style="position: relative;">
-  		<div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
-  		<div class="container valign">
-  			<div class="row" >
-  				<div class="col s12 l10 offset-l1">
-					<div class="col s12 fira center-align">
-						<div class="row white-text">
-							<h1>{{ the_field('h1') }}</h1>
-							<div class="h1 tw-bold">
-								{{ get_field('multivariate')[$variant]['headline'] }}
-							</div>
-							<p class="h4">{{ get_field('multivariate')[$variant]['byline'] }}</p>
-							<div class="col s12 l8 offset-l2">
-							<form method="POST" action="/wp-json/collection/savings">
-							    <div class="row inline-input-group mt-m--l mt-l--s">
-							        <div class="input-field col s12 omega l8 black-text">
-							            <select class="white">
-							                <option value="" disabled selected>Choose Saving Hack</option>
-							                <option value="insurance" data-icon="@asset('images/i-percentage.svg')" class="left" >Insurance</option>
-							                <option value="creditcards" data-icon="@asset('images/i-creditcard.svg')" class="left " >Credit Cards</option>
-							                <option value="shopping" data-icon="@asset('images/i-shoppingcart.svg')" class="left" >Shopping</option>
-							            </select>
-							        </div>
-							  
-							        <div class="col s12 l4 omega input-field">
-							            <button id="" type="submit" class="btn btn-flush waves-effect waves-light">
-							                Find Savings
-							            </button>
-							        </div>
-							    </div>
-							</form>
-						</div>
-						</div>
-					</div>
+	<div class="">
+		<div class="col s12 m8 generic-cover flex-center-bottom" style="height:500px;background-image:url( {{the_field('one_image')}} );">
+			<div  class="white pa-m--s mb-s--s">
+				<h1 class="h2">{{the_field('one_title')}}</h1>
+				<h4>{{the_field('one_text')}}</h4>
+			</div>
+			
+		</div>
+		<div class="col s12 m4 omega">
+			<div class="row flex-center-bottom generic-cover pa-s--s" style="height:250px;background-image:url({{the_field('two_image')}});">
+				<div  class="white pa-m--s mb-s--s">
+					<h4>{{the_field('two_title')}}</h4>
+					<p>{{the_field('two_text')}}</p>
+				</div>
+			</div>
+			<div class="row flex-center-bottom generic-cover pa-s--s" style="height:250px;background-image:url({{the_field('three_image')}});">
+				<div  class="white pa-m--s mb-s--s">
+					<h4>{{the_field('three_title')}}</h4>
+					<p>{{the_field('three_text')}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row blue lighten-5 pa-m--s pt-xl--m pb-xl--m">
+	<div class="row" style="background-image:url(https://www.toptal.com/designers/subtlepatterns/patterns/round.png);">
+		<div class="col m6 center-align">
+			<div class="row generic-contain" style="background-image:url({{the_field('section_2_image')}});height:500px;">
+				
+			</div>
+		</div>
+		<div class="col m6">
+			<div class="valign-wrapper" style="height:500px;">
+				<div class="row">
+					<h2>{{the_field('section_2_title')}}</h2>
+					<p>{{the_field('section_2_text')}}</p>
+					<a href="{{the_field('section_2_button')}}" class="waves-effect waves-light btn-large btn-round mt-l--s">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row generic-cover pa-m--s pt-xl--m pb-xl--m pt-m--s pb-m--s" style="background-image:url(@asset('images/bg-polkadot-blue.svg'));">
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m10 offset-m1">
-					<div class="row center-align">
-				
-							
+				<div class="col m3 center-align">
+					<div class="row generic-contain" style="background-image:url({{the_field('section_3_image_left')}}));height:500px;">
 						
-							<div class="h2 blue-grey-text text-darken-3 tw-ultrabold min-fluff">
-								Buying online promotes direct relationships with manufacturers 
-							</div>
-							<div class="h4 mt-m--s">
-								E-commerce has made direct-to-consumer shopping easy, and it benefits everyone.
-							</div>
-							<a href="" class="mt-m--s btn white-text mt-s--s">Find shops</a>
-	
+					</div>
+				</div>
+				<div class="col m6">
+					<div class="valign-wrapper" style="height:500px;">
+						<div class="row">
+							<h2 class="white-text">{{the_field('section_3_title')}}</h2>
+							<p class="white-text">{{the_field('section_3_text')}}</p>
+							<a href="{{the_field('section_3_button')}}" class="waves-effect waves-light btn-large btn-round mt-l--s right">Learn more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col m3 center-align">
+					<div class="row generic-contain" style="background-image:url({{the_field('section_3_image_right')}});height:500px;">
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row pa-l--l pa-xs--s grey lighten-5">
+	<div class="row generic-cover pa-m--s pt-xl--m pb-xl--m pt-m--s pb-m--s" style="background-image:url(@asset('images/bg-stripes-blue.svg'));">
 		<div class="container">
-			<div class="row mt-m--s mt-f--s">
-				<div class="col s12 m8">
-					<div class="row"> 
-						<div class="h5 tw-ultrabold no-fluff grey-text text-darken-2">FEATURED</div>
-						<div class="h2 min-fluff tw-ultrabold">Featured Hacks</div>
-					</div>
-					<div class="row">
-						
-						<?php $featured_articles = get_field('multivariate')[$variant]['featured_articles']; ?>
-					
-						@if( $featured_articles ) 
-							@foreach($featured_articles as $article)
-								<div class="row mt-m--s">
-									<p><span class="yellow tw-bold pl-s--s pr-s--s pt-xs--s pb-xs--s">{{$article['article_category']}}</span></p>
-								</div>
-								<a href="{{$article['article_link']}}" class="black-text">
-									<div class="row">
-										<div class="row mt-s--s white z-depth-1">
-											<div class="col s4 omega featured-card-height">
-												<div class="generic-cover featured-card-height" style="background-image:url({{$article['article_image']}});">
-
-												</div>
-											</div>
-											<div class="col s8 fira pa-s--s valign-wrapper featured-card-height">
-												<div class="row valign">
-													<div class="h4 tw-bold">{{$article['article_title']}}</div>
-													<div class="h3 tw-ultrabold min-fluff">{{$article['article_byline']}}</div>
-													<p>By: {{$article['article_author']}}</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							@endforeach
-						@endif
-
-						
+			<div class="row white z-depth-1 pa-m--s center-align">
+				<div class="h2 serif tw-bold">{{the_field('section_4_title')}}</div>
+				<h4>{{the_field('section_4_byline')}}</h4>
+			</div>
+			<div class="row mt-m--s">
+				<div class="col s12 mt-m--s mt-f--m m6 pr-m--s pl-f--s">
+					<div class="row pa-m--s white z-depth-1 border-radius">
+						<div class="col s4">
+							<div class="row">
+								<img src="@asset('images/2s-kids.svg')" alt="">
+							</div>
+						</div>
+						<div class="col s8">
+							<div class="h4 tw-ultrabold">{{the_field('section_4_box_1_title')}}</div>
+							<p>{{the_field('section_4_box_1_text')}}</p>
+						</div>
 					</div>
 				</div>
-				<div class="col s12 m4">
-					<div class="row"> 
-						<div class="h5 tw-ultrabold no-fluff grey-text text-darken-2">FEATURED</div>
-						<div class="h3 min-fluff tw-ultrabold">Top 5 Hacks</div>
+				<div class="col s12 mt-m--s mt-f--m m6 pl-m--s pr-f--s">
+					<div class="row pa-m--s white z-depth-1 border-radius">
+						<div class="col s4">
+							<div class="row">
+								<img src="@asset('images/2ts-kids.svg')" alt="">
+							</div>
+						</div>
+						<div class="col s8">
+							<div class="h4 tw-ultrabold">{{the_field('section_4_box_2_title')}}</div>
+							<p>{{the_field('section_4_box_2_text')}}</p>
+						</div>
 					</div>
-					<div class="row mt-m--s">
-						<?php $top_articles = get_field('multivariate')[$variant]['top_articles']; ?>
-						
-						@if( $top_articles ) 
-							@foreach($top_articles as $article)
-							
-								
-									<div class="row top-card mb-m--s">
-										<div class="top-card--counter ">
-											<i></i>
-										</div>
-										<div class="top-card--content ">
-											<a href="{{$article['link']}}" class="black-text">
-												<div class="row generic-cover featured-card-height" style="background-image:url({{$article['image']}});">
-												</div>
-												<div class="row fira mt-xs--s">
-													<div class="col s8 omega">
-														<div class="h4 tw-ultrabold min-fluff left">{{$article['title']}}</div>
-													</div>
-													<div class="col s4 omega">
-														<div class="h4 tw-ultrabold min-fluff right green-text">
-															${{$article['savings_amount']}}
-														</div>
-													</div>
-												</div>
-												<div class="row green-text right">
-													<small class="min-fluff"><i>Average Savings</i></small>
-												</div>
-											</a>
-										</div>
-
-										
-									</div>
-								
-							@endforeach
-						@endif
+				</div>
+			</div>
+			<div class="row mt-m--s">
+				<div class="col s12 mt-m--s mt-f--m m6 pr-m--s pl-f--s">
+					<div class="row pa-m--s white z-depth-1 border-radius">
+						<div class="col s4">
+							<div class="row">
+								<img src="@asset('images/3s-kids.svg')" alt="">
+							</div>
+						</div>
+						<div class="col s8">
+							<div class="h4 tw-ultrabold">{{the_field('section_4_box_3_title')}}</div>
+							<p>{{the_field('section_4_box_3_text')}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 mt-m--s mt-f--m m6 pl-m--s pr-f--s">
+					<div class="row pa-m--s white z-depth-1 border-radius">
+						<div class="col s4">
+							<div class="row">
+								<img src="@asset('images/4s-kids.svg')" alt="">
+							</div>
+						</div>
+						<div class="col s8">
+							<div class="h4 tw-ultrabold">{{the_field('section_4_box_4_title')}}</div>
+							<p>{{the_field('section_4_box_4_text')}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="row white pa-m--s pt-xl--m pb-xl--m pt-m--s pb-m--s">
+		<div class="container">
+			<div class="row center-align">
+				<div class="h2 serif tw-bold">What People Are Saying</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m10 offset-m1">
+					<div class="col s12 m4 pa-m--s">
+						<div class="white z-depth-2 pa-m--s pa-s--s border-radius" style="min-height:350px;">
+							<div class="row center-align">
+								<img src="@asset('/images/logo.png')" alt="">
+							</div>
+							<div class="row">
+								<div class="h3">Mellisaa R.</div>
+								<div class="h4">
+									Sales Associate
+								</div>
+								<p>
+									Blah blah blah
+								</p>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col s12 m4 pa-m--s">
+						<div class="light-blue lighten-3 z-depth-2 pa-m--s pa-s--s border-radius" style="min-height:350px;">
+							<div class="row center-align">
+								<img src="@asset('/images/logo.png')" alt="">
+							</div>
+							<div class="row">
+								<div class="h3">Mellisaa R.</div>
+								<div class="h4">
+									Sales Associate
+								</div>
+								<p>
+									Blah blah blah
+								</p>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col s12 m4 pa-m--s">
+						<div class="white z-depth-2 pa-m--s pa-s--s border-radius" style="min-height:350px;">
+							<div class="row center-align">
+								<img src="@asset('/images/logo.png')" alt="">
+							</div>
+							<div class="row">
+								<div class="h3">Mellisaa R.</div>
+								<div class="h4">
+									Sales Associate
+								</div>
+								<p>
+									Blah blah blah
+								</p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row pa-m--s generic-cover-bottom" style="height:800px;background-image:url(@asset('images/lawn-bg.svg'))">
+		<div class="container">
+			<div class="row">
+				<div class="col m4">
+					<div class="row mt-xl--s">
+						<img src="@asset('images/clouds-left.svg')" alt="">
+					</div>
+					<div class="row mt-xl--s pt-xl--s">
+						<img src="@asset('images/owl-stump.png')" alt="" style="width:300px;">
+					</div>
+				</div>
+				<div class="col m4 valign-wrapper" style="height:800px;">
+					<div class="row center-align">
+						<div class="h2 serif tw-bold">Thanks For Visiting</div>
+						<h4>Vanguard Children's Academy (VCA) is committed to providing an optimum environment for the development of your child. As a complete learning center, our staff is dedicated to mentoring and enhancing each child based on strong principles and commitment ensuring Kindergarten readiness.</h4>
+						<a class="waves-effect waves-light btn-large btn-round mt-l--s">Learn more</a>
+					</div>
+				</div>
+				<div class="col m4">
+					<div class="row mt-xl--s">
+						<img src="@asset('images/clouds-right.svg')" alt="">
+					</div>
+					<div class="row mt-xl--s">
+						<img src="@asset('images/kids-standing.png')" alt="" class="right" style="width:300px;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row pa-m--s" style="background-color:#94CCB9;">
+		
+	</div>
+
 @endsection
 
 

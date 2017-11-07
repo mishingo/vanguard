@@ -7,6 +7,9 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page();   
+}
 /**
  * Helper function for prettying up errors
  * @param string $message
@@ -138,12 +141,24 @@ Container::getInstance()
 
 
 function redirectOffer(){
-    header('Location: /sample-page/');
-    exit();
+    $thephrase = get_field('passphrase', 'option');
+    if($_POST['passphrase'] == $thephrase){
+        $cookie_name = "user";
+        $cookie_value = "active";
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+        header('Location: /parents');
+        exit();
+    } else {
+        header('Location: /parents?l=t');
+        exit();
+    }
+    
+    //if($_POST["passphrase"] == $thephrase){
+    //}
 }
 
 add_action( 'rest_api_init', function () {
-    register_rest_route( 'collection', '/savings', [
+    register_rest_route( 'passphrase', '/code', [
         'methods' => 'POST',
         'callback' => 'redirectOffer'
     ] );
@@ -154,6 +169,78 @@ add_action( 'rest_api_init', function () {
 
 
 
+
+add_action( 'phpmailer_init', 'configure_smtp' );
+
+
+function configure_smtp( PHPMailer $phpmailer ){
+    date_default_timezone_set('Etc/UTC');
+    //$phpmailer->SMTPDebug = 2;   
+    //$phpmailer->Debugoutput = 'html';
+    $phpmailer->isSMTP(); //switch to smtp
+    $phpmailer->Host = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 587;
+    $phpmailer->Username = 'mr@mishingo.com';
+    $phpmailer->Password = 'bazooka1990!';
+    $phpmailer->SMTPSecure = 'tls';
+    //$phpmailer->From = 'mr@mishingo.com';
+    //$phpmailer->addReplyTo('mr@mishingo.com', 'Miguel Ramos');
+    $phpmailer->FromName='Vanguard Childrens Academy';
+}
+function hashit($length) {
+  $alphabets = range('A','Z');
+  $numbers = range('0','9');
+  $additional_characters = array('_');
+  $final_array = array_merge($alphabets,$numbers,$additional_characters);
+  $hash = '';
+  while($length--) {
+    $key = array_rand($final_array);
+    $hash .= $final_array[$key];
+  }
+  return $hash;
+}
+function send_mail(){
+      $message_text = '';
+  
+
+          $message_text .=  "<h1>New Message!</h1> <br />";
+  
+
+      foreach($_POST as $key => $value){
+         
+         switch ($key) {
+             case "contact_name":
+                 $message_text .=  "<strong>Full Name</strong> : ". $value. " <br />";
+                 break;
+             case "contact_email":
+                 $message_text .=  "<strong>E-mail</strong> : ". $value. " <br />";
+                 break;
+             case "contact_body":
+                 $message_text .=  "<strong>Body</strong> : ". $value. " <br />";
+                 break;
+             default:
+                 $message_text .=  "<strong>BREH</strong>  <br />";
+         }
+      }
+    
+    $to = 'mr@mishingo.com';
+    $subject = "New Lead: #".hashit(5);
+    $message =  $message_text;
+    $headers = 'Content-Type: text/html'."\r\n".
+    'Cc: mr@mishingo.com'."\r\n";
+
+    wp_mail($to, $subject, $message, $headers);
+}
+
+
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'collection', '/message', [
+        'methods' => 'POST',
+        'callback' => 'send_mail'
+    ] );
+} );
 
 
 

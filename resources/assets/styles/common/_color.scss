@@ -37,20 +37,20 @@ $red: (
 );
 
 $pink: (
-  "base":       #e91e63,
-  "lighten-5":  #fce4ec,
-  "lighten-4":  #f8bbd0,
-  "lighten-3":  #f48fb1,
-  "lighten-2":  #f06292,
-  "lighten-1":  #ec407a,
-  "darken-1":   #d81b60,
-  "darken-2":   #c2185b,
-  "darken-3":   #ad1457,
-  "darken-4":   #880e4f,
-  "accent-1":    #ff80ab,
-  "accent-2":    #ff4081,
-  "accent-3":    #f50057,
-  "accent-4":    #c51162
+  "base":       #FF9494,
+  "lighten-5":  lighten(#FF9494,25%),
+  "lighten-4":  lighten(#FF9494,20%),
+  "lighten-3":  lighten(#FF9494,15%),
+  "lighten-2":  lighten(#FF9494,10%),
+  "lighten-1":  lighten(#FF9494,5%),
+  "darken-1":   darken(#FF9494,5%),
+  "darken-2":   darken(#FF9494,10%),
+  "darken-3":   darken(#FF9494,15%),
+  "darken-4":   darken(#00AA28,20%),
+  "accent-1":   saturate(#FF9494,5%),
+  "accent-2":   saturate(#FF9494,10%),
+  "accent-3":   desaturate(#FF9494,5%),
+  "accent-4":   desaturate(#FF9494,10%)
 );
 
 $purple: (

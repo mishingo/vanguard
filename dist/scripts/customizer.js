@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9fe888ee494be353c84a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fcea553777af83d7e044"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -721,9 +721,9 @@ module.exports = jQuery;
 
 /***/ }),
 /* 1 */
-/*!***************************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/html-entities/lib/html5-entities.js ***!
-  \***************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/html-entities/lib/html5-entities.js ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports) {
@@ -1239,9 +1239,9 @@ module.exports = function(module) {
 
 /***/ }),
 /* 5 */
-/*!****************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/querystring-es3/index.js ***!
-  \****************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/querystring-es3/index.js ***!
+  \*****************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1255,9 +1255,9 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ 7);
 
 /***/ }),
 /* 6 */
-/*!*****************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/querystring-es3/decode.js ***!
-  \*****************************************************************************************************************************************/
+/*!******************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/querystring-es3/decode.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1351,9 +1351,9 @@ var isArray = Array.isArray || function (xs) {
 
 /***/ }),
 /* 7 */
-/*!*****************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/querystring-es3/encode.js ***!
-  \*****************************************************************************************************************************************/
+/*!******************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/querystring-es3/encode.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1448,9 +1448,9 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ }),
 /* 8 */
-/*!***********************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/strip-ansi/index.js ***!
-  \***********************************************************************************************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/strip-ansi/index.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1466,9 +1466,9 @@ module.exports = function (str) {
 
 /***/ }),
 /* 9 */
-/*!***********************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/ansi-regex/index.js ***!
-  \***********************************************************************************************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/ansi-regex/index.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1572,9 +1572,9 @@ function problemType (type) {
 
 /***/ }),
 /* 11 */
-/*!**********************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/ansi-html/index.js ***!
-  \**********************************************************************************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/ansi-html/index.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1760,9 +1760,9 @@ ansiHTML.reset()
 
 /***/ }),
 /* 12 */
-/*!**************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/html-entities/index.js ***!
-  \**************************************************************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/html-entities/index.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1777,9 +1777,9 @@ module.exports = {
 
 /***/ }),
 /* 13 */
-/*!*************************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/html-entities/lib/xml-entities.js ***!
-  \*************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/html-entities/lib/xml-entities.js ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports) {
@@ -1943,9 +1943,9 @@ module.exports = XmlEntities;
 
 /***/ }),
 /* 14 */
-/*!***************************************************************************************************************************************************!*\
-  !*** /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/node_modules/html-entities/lib/html4-entities.js ***!
-  \***************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************!*\
+  !*** /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/node_modules/html-entities/lib/html4-entities.js ***!
+  \****************************************************************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
 /***/ (function(module, exports) {
@@ -2264,7 +2264,7 @@ module.exports = function(hash, moduleMap, options) {
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/miguelramos/mishingo/knockingcock/savinghacks/savinghacks-press/content/themes/sage/resources/assets/build/util/../helpers/hmr-client.js */2);
+__webpack_require__(/*! /Users/miguelramos/mishingo/vanguard_childrens_academy/wordpress/wp-content/themes/vanguard/resources/assets/build/util/../helpers/hmr-client.js */2);
 module.exports = __webpack_require__(/*! ./scripts/customizer.js */30);
 
 

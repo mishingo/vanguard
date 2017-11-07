@@ -39,3 +39,19 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
+$(".button-collapse").sideNav();
+
+$('#contact_action').click(function(){
+    $.ajax({
+      type: 'POST',
+      url: '/wp-json/collection/message',
+      data: $('#contact_form').serialize(),
+      beforeSend: function(){
+        $('#contact_preloader').removeClass('hide');
+        $('#contact_text').text('Sending...');
+      },
+      success: function () {
+        $("#contact_container").html($('#contact_success').html());
+      },
+    });
+  });

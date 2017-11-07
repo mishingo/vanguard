@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/content/themes/sage",
-  "devUrl": "http://savinghacks.blog",
+  "devUrl": "http://localhost:9999/",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
